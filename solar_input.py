@@ -49,15 +49,13 @@ def parse_star_parameters(line, star):
     """
     l=line.split()
     if l[0]=='Star':
-        for obj in solar_objects:
-
-        r=int(l[1])
-        color = l[2].list
-        m=int(l[3])
-        x=int(l[4])
-        y=int(l[5])
-        Vx=int(l[6])
-        Vy=int(l[7])
+        star.r=float(l[1])
+        star.color = l[2]
+        star.m=float(l[3])
+        star.x=float(l[4])
+        star.y=float(l[5])
+        star.Vx=float(l[6])
+        star.Vy=float(l[7])
 
 
 
@@ -78,13 +76,13 @@ def parse_planet_parameters(line, planet):
     """
     l=line.split()
     if l[0]=='Planet':
-        r=int(l[1])
-        color = l[2].list
-        m=int(l[3])
-        x=int(l[4])
-        y=int(l[5])
-        Vx=int(l[6])
-        Vy=int(l[7])
+        planet.r=float(l[1])
+        planet.color = l[2]
+        planet.m=float(l[3])
+        planet.x=float(l[4])
+        planet.y=float(l[5])
+        planet.Vx=float(l[6])
+        planet.Vy=float(l[7])
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
